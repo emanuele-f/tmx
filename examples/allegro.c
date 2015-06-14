@@ -96,7 +96,7 @@ void draw_layer(tmx_map *map, tmx_layer *layer) {
 	op = layer->opacity;
 	for (i=0; i<map->height; i++) {
 		for (j=0; j<map->width; j++) {
-			ts = tmx_get_tile(map, layer->content.gids[(i*map->width)+j], &x, &y);
+			ts = tmx_get_tileset(map, layer->content.gids[(i*map->width)+j], &x, &y);
 			if (ts) {
 				w = ts->tile_width; h = ts->tile_height;
 				tileset = (ALLEGRO_BITMAP*)ts->image->resource_image;
